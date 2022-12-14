@@ -3,9 +3,12 @@ const app = express()
 
 require(`dotenv`).config()
 
+app.use('/places', require('./controllers/places'))
+
 app.get('/', (req, res)=>{
     res.send('This is the first page')
 })
+
 
 //Use this to get any page that doesn't reach any path
 app.get('*',(req,res)=>{
