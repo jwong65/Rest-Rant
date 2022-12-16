@@ -6,7 +6,9 @@ function places(placesinfo){
         return(
             <Def>
                 <main>
-                    <h1>Places</h1>
+                    {/* <h1>Places</h1> */}
+                    <h2>{place.name}</h2>
+                    <img src = {place.pic} alt = {place.name}></img>
                 </main>
             </Def>
         )
