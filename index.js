@@ -3,10 +3,16 @@ const app = express()
 
 require(`dotenv`).config()
 
+//JSX 
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+
 app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res)=>{
-    res.send('This is the first page')
+    //Will render home.jsx
+    res.render('home')
+    //res.send('This is the first page')
 })
 
 
