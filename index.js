@@ -18,7 +18,9 @@ app.get('/', (req, res)=>{
 
 //Use this to get any page that doesn't reach any path
 app.get('*',(req,res)=>{
-    res.status(404).send("<h1>THIS IS A 404</h1>")
+    //res.status(404).send("<h1>THIS IS A 404</h1>")
+    //This render will grab 404.jsx
+    res.render('404')
 })
 
 app.listen(process.env.PORT)
