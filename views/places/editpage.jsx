@@ -1,4 +1,4 @@
-const React = require('express')
+const React = require('react')
 const Def = require('../default')
 
 function editPage(){
