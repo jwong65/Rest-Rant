@@ -4,9 +4,19 @@ h1 {
   }
 body{
     background-color: bisque;
+    text-align: center;
 }
 .strawberry{
     height: 250px;
     width: 250px;
+}
+.mountainpic{
+    height: 350px;
+    width: 350px;
+    /* Added CSS to center image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%
 }
   
