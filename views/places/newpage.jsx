@@ -1,4 +1,4 @@
-const React = require('express')
+const React = require('react')
 //Default
 const Def = require('../default')
 
