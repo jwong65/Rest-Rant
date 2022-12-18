@@ -8,7 +8,7 @@ function newPage(){
             <main>
                 <h1>Add a new place</h1>
                 {/* Action sends to places back to index */}
-                <form method='POST' action="/places">
+                {/* <form method='POST' action="/places">
                     <div>
                         <label htmlFor='name'>The place name:</label>
                         <input id='name' name='name' required></input>
@@ -27,10 +27,36 @@ function newPage(){
                     </div>
                     <div>
                         <label htmlFor='cuisine'>Cuisine:</label>
-                        <input id='cuisine' name='cuisine'></input>
+                        <input id='cuisine' name='cuisine' required></input>
                     </div>
                     <input type='submit' value='Submit'></input>
-                </form>
+                </form> */}
+
+                {/* This is the form from the assignment */}
+                <form method="POST" action="/places">
+                        <div>
+                            <label htmlFor="name">Place Name</label>
+                            <input id="name" name="name" required />
+                        </div>
+                        <div>
+                            <label htmlFor="pic">Place Picture</label>
+                            <input type ="url" id="pic" name="pic" />
+                        </div>
+                        <div>
+                            <label htmlFor="city">City</label>
+                            <input id="city" name="city" />
+                        </div>
+                        <div>
+                            <label htmlFor="state">State</label>
+                            <input id="state" name="state" />
+                        </div>
+                        <div>
+                            <label htmlFor="cuisines">Cuisines</label>
+                            <input id="cuisines" name="cuisines" required />
+                        </div>
+                        <input type="submit" value="Add Place" />
+                        </form>
+
             </main>
         </Def>
     )
