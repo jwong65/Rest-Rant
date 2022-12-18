@@ -35,9 +35,9 @@ router.post('/places', (req, res)=>{
     
 })
 
-// router.get('/new', (req, res)=>{
-//   res.render('places/newpage')
-// })
+router.get('/new', (req, res)=>{
+  res.render('places/newpage')
+})
 
 // router.get('places/:id',(req,res)=>{
 //   res.send('Placeholder for details')
