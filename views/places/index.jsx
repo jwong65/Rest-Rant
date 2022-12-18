@@ -29,7 +29,7 @@ function places(placesinfo){
                 <div className='row'>
                     {placeFormat}
                 </div>
-                <a href="/new">
+                <a href="/places/new">
                     <button className="btn-primary">Add a New Place Page</button>
                 </a>
             </main>
