@@ -3,6 +3,13 @@ const React = require('express')
 const Def = require('../default')
 
 function newPage(){
+    return(
+        <Def>
+            <main>
+                <h1>Add a new place</h1>
+            </main>
+        </Def>
+    )
 
 }
 
