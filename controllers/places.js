@@ -60,11 +60,14 @@ router.post('/places', (req, res)=>{
   //placeholder information copied over.
   console.log('Post')
     
-  res.render('places/index')
 })
 
 router.get('/new', (req, res)=>{
   res.render('places/newpage')
 })
+
+// router.get('places/:id',(req,res)=>{
+//   res.send('Placeholder for details')
+// })
 
 module.exports = router
