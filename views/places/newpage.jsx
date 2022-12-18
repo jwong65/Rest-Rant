@@ -10,20 +10,26 @@ function newPage(){
                 {/* Action sends to places back to index */}
                 <form method='POST' action="/places">
                     <div>
-                        <label htmlFor='name'>The place name</label>
+                        <label htmlFor='name'>The place name:</label>
                         <input id='name' name='name'></input>
                     </div>
                     <div>
-                        <label htmlFor='pic'>The place image</label>
+                        <label htmlFor='pic'>The place image:</label>
                         <input type='url' id='pic' name='pic'></input>
                     </div>
                     <div>
-                        <label htmlFor='cityname'>The city name</label>
+                        <label htmlFor='cityname'>The city name:</label>
                         <input id='cityname' name='cityname'></input>
                     </div>
                     <div>
-                        
+                        <label htmlFor='statename'>The state name:</label>
+                        <input id='statename' name='state'></input>
                     </div>
+                    <div>
+                        <label htmlFor='cuisine'>Cuisine:</label>
+                        <input id='cuisine' name='cuisine'></input>
+                    </div>
+                    <input type='submit' value='Submit'></input>
                 </form>
             </main>
         </Def>
