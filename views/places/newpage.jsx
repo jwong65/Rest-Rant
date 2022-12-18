@@ -7,40 +7,40 @@ function newPage(){
         <Def>
             <main>
                 <h1>Add a new place</h1>
-                {/* Action sends to places back to index */}
-                {/* <form method='POST' action="/places">
-                    <div>
+                {/*Action sends to places back to index */}
+                <form method='POST' action="/places">
+                    <div className='form-group'>
                         <label htmlFor='name'>The place name:</label>
                         <input id='name' name='name' required></input>
                     </div>
-                    <div>
+                    <div className='form-group'>
                         <label htmlFor='pic'>The place image:</label>
                         <input type='url' id='pic' name='pic'></input>
                     </div>
-                    <div>
+                    <div className='form-group'>
                         <label htmlFor='cityname'>The city name:</label>
                         <input id='cityname' name='cityname'></input>
                     </div>
-                    <div>
+                    <div className='form-group'>
                         <label htmlFor='statename'>The state name:</label>
                         <input id='statename' name='state'></input>
                     </div>
-                    <div>
+                    <div className='form-group'>
                         <label htmlFor='cuisine'>Cuisine:</label>
                         <input id='cuisine' name='cuisine' required></input>
                     </div>
                     <input type='submit' value='Submit'></input>
-                </form> */}
+                </form>
 
                 {/* This is the form from the assignment */}
-                <form method="POST" action="/places">
+                {/* <form method= "POST" action="/places">
                         <div>
                             <label htmlFor="name">Place Name</label>
                             <input id="name" name="name" required />
                         </div>
                         <div>
                             <label htmlFor="pic">Place Picture</label>
-                            <input type ="url" id="pic" name="pic" />
+                            <input id="pic" name="pic" />
                         </div>
                         <div>
                             <label htmlFor="city">City</label>
@@ -55,7 +55,7 @@ function newPage(){
                             <input id="cuisines" name="cuisines" required />
                         </div>
                         <input type="submit" value="Add Place" />
-                        </form>
+                        </form> */}
 
             </main>
         </Def>
