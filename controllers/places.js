@@ -19,7 +19,12 @@ router.get('/', (req, res)=>{
         city: 'Phoenix',
         state: 'AZ',
         cuisines: 'Coffee, Bakery',
-        pic: 'http://placekitten.com/350/350'
+        pic: 'images/rylan-hill-phoenix-unsplash.jpg',
+        author: `Rylan Hill`,
+        attribute: `https://unsplash.com/@rylanhill?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText`,
+        unsplash: `https://unsplash.com/s/photos/phoenix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText`
+        //Photo by <a href="https://unsplash.com/@rylanhill?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rylan Hill</a> on <a href="https://unsplash.com/s/photos/phoenix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
       }]
       
     res.render('places/index', {places})
