@@ -19,15 +19,15 @@ function newPage(){
                     </div>
                     <div className='form-group'>
                         <label htmlFor='cityname'>The city name:</label>
-                        <input className ='form-control' id='cityname' name='cityname'></input>
+                        <input className ='form-control text-group' id='cityname' name='cityname'></input>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='statename'>The state name:</label>
-                        <input className='form-control' id='statename' name='state'></input>
+                        <input className='form-control text-center' id='statename' name='state'></input>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='cuisine'>Cuisine:</label>
-                        <input className='form-control' id='cuisine' name='cuisine' required></input>
+                        <input className='form-control text-center' id='cuisine' name='cuisine' required></input>
                     </div>
                     <input type='submit' value='Submit'></input>
                 </form>
