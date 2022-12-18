@@ -25,6 +25,9 @@ body{
     width: 300px;
 }
 .form-control{
+    margin: 0;
     width:50%;
+    position: relative;
+    left:375px;
 }
   
