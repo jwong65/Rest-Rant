@@ -11,23 +11,23 @@ function newPage(){
                 <form method='POST' action="/places">
                     <div className='form-group'>
                         <label htmlFor='name'>The place name:</label>
-                        <input id='name' name='name' required></input>
+                        <input className='form-control' id='name' name='name' required></input>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='pic'>The place image:</label>
-                        <input type='url' id='pic' name='pic'></input>
+                        <input className='form-control' type='url' id='pic' name='pic'></input>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='cityname'>The city name:</label>
-                        <input id='cityname' name='cityname'></input>
+                        <input className ='form-control' id='cityname' name='cityname'></input>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='statename'>The state name:</label>
-                        <input id='statename' name='state'></input>
+                        <input className='form-control' id='statename' name='state'></input>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='cuisine'>Cuisine:</label>
-                        <input id='cuisine' name='cuisine' required></input>
+                        <input className='form-control' id='cuisine' name='cuisine' required></input>
                     </div>
                     <input type='submit' value='Submit'></input>
                 </form>
