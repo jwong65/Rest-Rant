@@ -4,8 +4,12 @@ const app = express()
 require(`dotenv`).config()
 
 //JSX 
+app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+
+//To refer to the public directory
+app.use(express.static('public'))
 
 app.use('/places', require('./controllers/places'))
 
