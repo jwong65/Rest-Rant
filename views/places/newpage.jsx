@@ -11,7 +11,7 @@ function newPage(){
                 <form method='POST' action="/places">
                     <div>
                         <label htmlFor='name'>The place name:</label>
-                        <input id='name' name='name'></input>
+                        <input id='name' name='name' required></input>
                     </div>
                     <div>
                         <label htmlFor='pic'>The place image:</label>
