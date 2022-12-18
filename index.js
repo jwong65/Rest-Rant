@@ -8,7 +8,7 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
-//To refer to the public directory
+//To refer to the public
 app.use(express.static('public'))
 
 app.use('/places', require('./controllers/places'))
