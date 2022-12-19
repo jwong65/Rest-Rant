@@ -29,7 +29,7 @@ function newPage(){
                         <label htmlFor='cuisine'>Cuisine:</label>
                         <input className='form-control text-center' id='cuisine' name='cuisine' required></input>
                     </div>
-                    <input type='submit' value='Submit'></input>
+                    <input type='submit' className="btn btn-primary" value='Submit'></input>
                 </form>
 
                 {/* This is the form from the assignment */}
