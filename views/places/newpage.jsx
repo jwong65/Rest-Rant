@@ -8,7 +8,7 @@ function newPage(){
             <main>
                 <h1>Add a new place</h1>
                 {/*Action sends to places back to index */}
-                <form method='POST' action="/places">
+                <form method="POST" action="/places">
                     <div className='form-group'>
                         <label htmlFor='name'>The place name:</label>
                         <input className='form-control text-center' id='name' name='name' required></input>
@@ -30,7 +30,7 @@ function newPage(){
                         <label htmlFor='cuisines'>Cuisine:</label>
                         <input className='form-control text-center' id='cuisines' name='cuisines' required></input>
                     </div>
-                    <input type='submit' className="btn btn-primary" value='Submit'></input>
+                    <input type='submit' className="btn btn-primary" value='Add Place'></input>
                 </form>
 
                 {/* This is the form from the assignment */}
