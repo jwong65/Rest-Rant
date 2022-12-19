@@ -13,6 +13,9 @@ app.use(express.static('public'))
 
 app.use('/places', require('./controllers/places'))
 
+app.use(express.urlencoded({ extended: true }))
+
+
 app.get('/', (req, res)=>{
     //Will render home.jsx
     res.render('home')

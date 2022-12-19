@@ -23,8 +23,8 @@ let places = [{
 
 }]
 router.post('/', (req, res)=>{
-  console.log('Posting')
-  res.render('places/index', {places})
+  console.log(req.body)
+  res.send('POST /places')
 })
 
 
