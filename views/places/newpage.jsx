@@ -11,23 +11,24 @@ function newPage(){
                 <form method='POST' action="/places">
                     <div className='form-group'>
                         <label htmlFor='name'>The place name:</label>
-                        <input className='form-control' id='name' name='name' required></input>
+                        <input className='form-control text-center' id='name' name='name' required></input>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='pic'>The place image:</label>
-                        <input className='form-control' type='url' id='pic' name='pic'></input>
+                        <input className='form-control text-center' id='pic' name='pic'></input>
+                        {/* type='url' */}
                     </div>
                     <div className='form-group'>
-                        <label htmlFor='cityname'>The city name:</label>
-                        <input className ='form-control text-group' id='cityname' name='cityname'></input>
+                        <label htmlFor='city'>The city name:</label>
+                        <input className ='form-control text-center' id='city' name='city'></input>
                     </div>
                     <div className='form-group'>
-                        <label htmlFor='statename'>The state name:</label>
-                        <input className='form-control text-center' id='statename' name='state'></input>
+                        <label htmlFor='state'>The state name:</label>
+                        <input className='form-control text-center' id='state' name='state'></input>
                     </div>
                     <div className='form-group'>
-                        <label htmlFor='cuisine'>Cuisine:</label>
-                        <input className='form-control text-center' id='cuisine' name='cuisine' required></input>
+                        <label htmlFor='cuisines'>Cuisine:</label>
+                        <input className='form-control text-center' id='cuisines' name='cuisines' required></input>
                     </div>
                     <input type='submit' className="btn btn-primary" value='Submit'></input>
                 </form>
