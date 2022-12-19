@@ -15,7 +15,7 @@ function newPage(){
                     </div>
                     <div className='form-group'>
                         <label htmlFor='pic'>The place image:</label>
-                        <input className='form-control text-center' id='pic' name='pic'></input>
+                        <input className='form-control text-center' type='url' id='pic' name='pic'></input>
                         {/* type='url' */}
                     </div>
                     <div className='form-group'>
