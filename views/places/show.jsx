@@ -4,7 +4,9 @@ const Def = require('../default')
 function show(){
     return(
         <Def>
-            <main></main>
+            <main>
+                <h1> Show this Page</h1>
+            </main>
         </Def>
     )
 }

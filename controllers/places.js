@@ -31,6 +31,17 @@ router.get('/', (req, res)=>{
     
     res.render('places/index', {places})
 })
+router.get('/:id', (req, res) => {
+  
+  // This is for when the number of id isnt a number
+  if (isNaN(id)){
+    res.render('404')
+  }
+  else{
+    res.render('places/show')
+  }
+  
+})
 router.get('/new', (req, res)=>{
   res.render('places/newpage')
 })
