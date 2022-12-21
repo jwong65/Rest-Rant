@@ -37,8 +37,12 @@ router.get('/:id', (req, res) => {
   if (isNaN(id)){
     res.render('404')
   }
+  //This statement is if the id isn't there
+  else if(!places[id]){
+    res.render('404')
+  }
   else{
-    res.render('places/show')
+    res.render('places/show', {place: places[id]})
   }
   
 })
