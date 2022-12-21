@@ -4,7 +4,6 @@ const Def = require('../default')
 function places(placesinfo){
     let placeFormat =placesinfo.places.map((place)=>{
         return(
-            <Def>
                 <div className='col-sm-6'>
                     {/* <h1>Places</h1> */}
                     <h2>{place.name}</h2>
@@ -19,7 +18,6 @@ function places(placesinfo){
                         Located in {place.city}, {place.state}
                     </p>
                 </div>
-            </Def>
         )
     })
     return(
