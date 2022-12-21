@@ -13,9 +13,18 @@ function Def(html){
             <body>
                 <nav>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>
+                            {/* This is for the homepage */}
+                            <a href='/'>Homepage</a>
+                        </li>
+                        <li>
+                            {/* This is for places */}
+                            <a href='/places'>Places</a>
+                        </li>
+                        <li>
+                            {/* Page to add new places */}
+                            <a href='/places/new'>Add some new places</a>
+                        </li>
                     </ul>
                 </nav>
                     {html.children}

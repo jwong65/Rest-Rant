@@ -25,7 +25,7 @@ function places(placesinfo){
     return(
         <Def>
             <main>
-                <h1> Plaecs Index Page</h1>
+                <h1> Places Index Page</h1>
                 <div className='row'>
                     {placeFormat}
                 </div>
