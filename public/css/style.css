@@ -6,6 +6,11 @@ body{
     background-color: bisque;
     text-align: center;
 }
+main{
+    margin-right: 20px;
+    margin-left:  20px;
+    background-color: rgb(255, 230, 200);
+}
 .strawberry{
     height: 250px;
     width: 250px;
