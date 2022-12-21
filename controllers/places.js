@@ -32,6 +32,8 @@ router.get('/', (req, res)=>{
     res.render('places/index', {places})
 })
 router.get('/:id', (req, res) => {
+  //id has to be definied
+  let id = Number(req.params.id)
   
   // This is for when the number of id isnt a number
   if (isNaN(id)){
