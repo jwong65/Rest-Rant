@@ -48,6 +48,11 @@ router.get('/:id', (req, res) => {
   }
   
 })
+// This is the edit.jsx
+router.get('/:id/edit', (req, res) => {
+  res.render('places/edit')
+})
+
 router.get('/new', (req, res)=>{
   res.render('places/newpage')
 })
