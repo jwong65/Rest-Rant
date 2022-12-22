@@ -50,7 +50,16 @@ router.get('/:id', (req, res) => {
 })
 // This is the edit.jsx
 router.get('/:id/edit', (req, res) => {
-  res.render('places/edit')
+  let id = Number(req.params.id)
+  if(isNaN(id)){
+    res.render('404')
+  }
+  else if (!places[id]){
+    res.render('places/edit')
+  }
+  else{
+    res.render('places/edit', {place: places[id]})
+  }
 })
 
 router.get('/new', (req, res)=>{
