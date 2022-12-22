@@ -24,6 +24,10 @@ router.post('/', (req, res)=>{
   res.redirect('/places')
 })
 
+router.get('/new', (req, res)=>{
+  res.render('places/newpage')
+})
+
 
 router.get('/', (req, res)=>{
     //res.send('GET /places')
@@ -62,9 +66,6 @@ router.get('/:id/edit', (req, res) => {
   }
 })
 
-router.get('/new', (req, res)=>{
-  res.render('places/newpage')
-})
 
 // router.get('places/:id',(req,res)=>{
 //   res.send('Placeholder for details')
