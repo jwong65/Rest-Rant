@@ -7,24 +7,24 @@ function edit(data){
             <main>
                 <h1></h1>
                 <form method="POST" action={`/places/${data.place.id}?method=PUT`}>
-                    <div className='form-group'>
+                    <div className='form-group col-sm-6'>
                         <label htmlFor='name'>The place name:</label>
-                        <input className='form-control text-center' id='name' name='name' value = {data.place.name} required></input>
+                        <input className='form-control text-center' id='name' name='name' value={data.place.name} required></input>
                     </div>
-                    <div className='form-group'>
+                    <div className='form-group col-sm-6'>
                         <label htmlFor='pic'>The place image:</label>
                         <input className='form-control text-center' type='url' id='pic' name='pic' value={data.place.pic}></input>
                         {/* type='url' */}
                     </div>
-                    <div className='form-group'>
+                    <div className='form-group col-sm-6'>
                         <label htmlFor='city'>The city name:</label>
                         <input className ='form-control text-center' id='city' name='city' value={data.place.state}></input>
                     </div>
-                    <div className='form-group'>
+                    <div className='form-group col-sm-6'>
                         <label htmlFor='state'>The state name:</label>
                         <input className='form-control text-center' id='state' name='state'></input>
                     </div>
-                    <div className='form-group'>
+                    <div className='form-group col-sm-6'>
                         <label htmlFor='cuisines'>Cuisine:</label>
                         <input className='form-control text-center' id='cuisines' name='cuisines' required></input>
                     </div>
