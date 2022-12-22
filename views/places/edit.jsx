@@ -22,11 +22,11 @@ function edit(data){
                     </div>
                     <div className='form-group col-sm-6'>
                         <label htmlFor='state'>The state name:</label>
-                        <input className='form-control text-center' id='state' name='state'></input>
+                        <input className='form-control text-center' id='state' name='state' value={data.place.state}></input>
                     </div>
                     <div className='form-group col-sm-6'>
                         <label htmlFor='cuisines'>Cuisine:</label>
-                        <input className='form-control text-center' id='cuisines' name='cuisines' required></input>
+                        <input className='form-control text-center' id='cuisines' name='cuisines' value = {data.place.cuisines} required></input>
                     </div>
                     <input type='submit' className="btn btn-primary" value='Add Place'></input>
                 </form>
