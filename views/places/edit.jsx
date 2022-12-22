@@ -3,22 +3,23 @@ const Def = require('../default')
 
 function edit(data){
     return(
+
         <Def>
             <main>
                 <h1></h1>
-                <form method="POST" action={`/places/${data.place.id}?method=PUT`}>
+                <form method="POST" action={`/places/${data.place.id}?_git stamethod=PUT`}>
                     <div className='form-group col-sm-6'>
                         <label htmlFor='name'>The place name:</label>
                         <input className='form-control text-center' id='name' name='name' value={data.place.name} required></input>
                     </div>
                     <div className='form-group col-sm-6'>
                         <label htmlFor='pic'>The place image:</label>
-                        <input className='form-control text-center' type='url' id='pic' name='pic' value={data.place.pic}></input>
+                        <input className='form-control text-center' id='pic' name='pic' value={data.place.pic}></input>
                         {/* type='url' */}
                     </div>
                     <div className='form-group col-sm-6'>
                         <label htmlFor='city'>The city name:</label>
-                        <input className ='form-control text-center' id='city' name='city' value={data.place.state}></input>
+                        <input className ='form-control text-center' id='city' name='city' value={data.place.city}></input>
                     </div>
                     <div className='form-group col-sm-6'>
                         <label htmlFor='state'>The state name:</label>

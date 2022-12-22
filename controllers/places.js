@@ -52,6 +52,32 @@ router.get('/:id', (req, res) => {
   }
   
 })
+
+router.put('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('404')
+  }
+  else if (!places[id]) {
+      res.render('404')
+  }
+  else {
+      if(!req.body.pic){
+        //Default picture needs to be placeholder 
+        req.body.pic = 'http://placekitten/300/300'
+      }
+      if(!req.body.city){
+        req.body.city = 'Anycity'
+      }
+      if(!req.body.state){
+        req.body.state='USA'
+      }
+
+      places[id] = req.body
+      res.redirect(`/places/${id}`)
+  }
+})
+
 // This is the edit.jsx
 router.get('/:id/edit', (req, res) => {
   let id = Number(req.params.id)
