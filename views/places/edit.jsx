@@ -7,7 +7,7 @@ function edit(data){
         <Def>
             <main>
                 <h1></h1>
-                <form method="POST" action={`/places/${data.place.id}?_git stamethod=PUT`}>
+                <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
                     <div className='form-group col-sm-6'>
                         <label htmlFor='name'>The place name:</label>
                         <input className='form-control text-center' id='name' name='name' value={data.place.name} required></input>
