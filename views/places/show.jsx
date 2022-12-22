@@ -1,6 +1,5 @@
 const React = require('react')
 const Def = require('../default')
-const places = require('../../models/places')
 
 // data argument includes place information
 function show(data){
