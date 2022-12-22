@@ -18,7 +18,7 @@ function edit(data){
                     </div>
                     <div className='form-group'>
                         <label htmlFor='city'>The city name:</label>
-                        <input className ='form-control text-center' id='city' name='city'></input>
+                        <input className ='form-control text-center' id='city' name='city' value={data.place.state}></input>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='state'>The state name:</label>
