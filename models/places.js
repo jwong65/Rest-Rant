@@ -2,9 +2,9 @@ const mongoose= require('mongoose')
 
 const placesSchema = new mongoose.Schema({
   name: {type:String, required:true},
-  city: String,
-  state: String,
-  cuisines: String,
+  city: {type:String, default:"AnyCity"},
+  state: {type:String, default:"AnyState"},
+  cuisines: {type:String, required:true},
   pic: String,
   attribute: String,
   author: String,
@@ -12,7 +12,7 @@ const placesSchema = new mongoose.Schema({
   site: String,
   founded: Number
 })
-
+module.exports= mongoose.model('Place', placesSchema)
 // module.exports = [{
 //     name: 'H-Thai-ML',
 //     city: 'Seattle',
