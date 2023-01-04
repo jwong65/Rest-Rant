@@ -1,12 +1,12 @@
 const React =  require('react')
 const Def = require('../default')
 
-function places(placesinfo){
-    let placeFormat =placesinfo.places.map((place, index)=>{
+function places(data){
+    let placeFormat =data.places.map((place)=>{
         return(
                 <div className='col-sm-6'>
                     {/* <h1>Places</h1> */}
-                    <h2><a href={`/places/${index}`}>{place.name}</a></h2>
+                    <h2><a href={`/places/${place.id}`}>{place.name}</a></h2>
                     <p className='text-center'>
                         {place.cuisines}
                     </p>

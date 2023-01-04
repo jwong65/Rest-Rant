@@ -54,7 +54,13 @@ router.get('/', (req, res)=>{
     })
 })
 router.get('/:id', (req, res) => {
-  res.send('STUB for GET /:id')
+  db.Place.findById(req.params.id)
+  .then(place=>{
+    res.render('places/show', {place})
+  })
+  .catch(err=>{
+    res.render('404')
+  })
   //id has to be definied
   // let id = Number(req.params.id)
   
