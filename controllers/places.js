@@ -1,7 +1,16 @@
 const router = require('express').Router()
-const places = require('../models/places')
+// const places = require('../models/places')
+// Instead of using places, db will refer to the folder models
+const db = require('../models')
+
 router.post('/', (req, res)=>{
-  res.send('STUB for POST /places')
+  db.Place.create(req.body)
+  .then(()=>{
+    res.redirect('/places')
+  })
+  .catch(err=>{
+    res.render('404')
+  })
   // //console.log(req.body)
   
   // if (!req.body.pic) {
@@ -35,7 +44,14 @@ router.get('/', (req, res)=>{
     //placeholder information copied over.
     
     // res.render('places/index', {places})
-    res.send('STUB for GET /places')
+    db.Place.find()
+    .then((places)=>{
+      res.render('places/index', {places})
+    })
+    .catch(err=>{
+      console.log(err)
+      res.render('404')
+    })
 })
 router.get('/:id', (req, res) => {
   res.send('STUB for GET /:id')

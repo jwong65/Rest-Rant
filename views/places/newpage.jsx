@@ -30,6 +30,10 @@ function newPage(){
                         <label htmlFor='cuisines'>Cuisine:</label>
                         <input className='form-control text-center' id='cuisines' name='cuisines' required></input>
                     </div>
+                    <div className='form-group'>
+                        <label htmlFor='founded'>Founded</label>
+                        <input className='form-control text-center' id='founded' name='founded'></input>
+                    </div>
                     <input type='submit' className="btn btn-primary" value='Add Place'></input>
                 </form>
 
