@@ -5,3 +5,6 @@ mongoose.connect(process.env.MONGO_URI,{
     useNewUrlParser:true,
     useUnifiedTopology: true
 })
+
+//Needs to connect to the places.js
+module.exports.Place =require('./places')

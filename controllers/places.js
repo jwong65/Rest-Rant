@@ -1,27 +1,28 @@
 const router = require('express').Router()
 const places = require('../models/places')
 router.post('/', (req, res)=>{
-  //console.log(req.body)
+  res.send('STUB for POST /places')
+  // //console.log(req.body)
   
-  if (!req.body.pic) {
-    // Default image if one is not provided
-    req.body.pic = 'http://placekitten.com/400/400'
-    req.body.author = 'Placekitten'
-    req.body.attribute = 'https://placekitten.com'
-    req.body.unsplash = req.body.pic
-    req.body.site = 'Placekitten'
-  }
-  if (!req.body.city) {
-    req.body.city = 'Anytown'
-  }
-  if (!req.body.state) {
-    req.body.state = 'USA'
-  }
+  // if (!req.body.pic) {
+  //   // Default image if one is not provided
+  //   req.body.pic = 'http://placekitten.com/400/400'
+  //   req.body.author = 'Placekitten'
+  //   req.body.attribute = 'https://placekitten.com'
+  //   req.body.unsplash = req.body.pic
+  //   req.body.site = 'Placekitten'
+  // }
+  // if (!req.body.city) {
+  //   req.body.city = 'Anytown'
+  // }
+  // if (!req.body.state) {
+  //   req.body.state = 'USA'
+  // }
 
-  //Push into places
-  places.push(req.body)
+  // //Push into places
+  // places.push(req.body)
   
-  res.redirect('/places')
+  // res.redirect('/places')
 })
 
 router.get('/new', (req, res)=>{
@@ -33,65 +34,74 @@ router.get('/', (req, res)=>{
     //res.send('GET /places')
     //placeholder information copied over.
     
-    res.render('places/index', {places})
+    // res.render('places/index', {places})
+    res.send('STUB for GET /places')
 })
 router.get('/:id', (req, res) => {
+  res.send('STUB for GET /:id')
   //id has to be definied
-  let id = Number(req.params.id)
+  // let id = Number(req.params.id)
   
-  // This is for when the number of id isnt a number
-  if (isNaN(id)){
-    res.render('404')
-  }
-  //This statement is if the id isn't there
-  else if(!places[id]){
-    res.render('404')
-  }
-  else{
-    res.render('places/show', {place: places[id]})
-  }
+  // // This is for when the number of id isnt a number
+  // if (isNaN(id)){
+  //   res.render('404')
+  // }
+  // //This statement is if the id isn't there
+  // else if(!places[id]){
+  //   res.render('404')
+  // }
+  // else{
+  //   res.render('places/show', {place: places[id]})
+  // }
   
 })
 
 router.put('/:id', (req, res) => {
-  let id = Number(req.params.id)
-  if (isNaN(id)) {
-      res.render('404')
-  }
-  else if (!places[id]) {
-      res.render('404')
-  }
-  else {
-      if(!req.body.pic){
-        //Default picture needs to be placeholder 
-        req.body.pic = 'http://placekitten/300/300'
-      }
-      if(!req.body.city){
-        req.body.city = 'Anycity'
-      }
-      if(!req.body.state){
-        req.body.state='USA'
-      }
+  res.send('STUB for PUT /:id')
+  // let id = Number(req.params.id)
+  // if (isNaN(id)) {
+  //     res.render('404')
+  // }
+  // else if (!places[id]) {
+  //     res.render('404')
+  // }
+  // else {
+  //     if(!req.body.pic){
+  //       //Default picture needs to be placeholder 
+  //       req.body.pic = 'http://placekitten/300/300'
+  //     }
+  //     if(!req.body.city){
+  //       req.body.city = 'Anycity'
+  //     }
+  //     if(!req.body.state){
+  //       req.body.state='USA'
+  //     }
 
-      places[id] = req.body
-      res.redirect(`/places/${id}`)
-  }
+  //     places[id] = req.body
+  //     res.redirect(`/places/${id}`)
+  // }
 })
 
 // This is the edit.jsx
 router.get('/:id/edit', (req, res) => {
-  let id = Number(req.params.id)
-  if(isNaN(id)){
-    res.render('404')
-  }
-  else if (!places[id]){
-    res.render('places/edit')
-  }
-  else{
-    res.render('places/edit', {place: places[id]})
-  }
+  res.send('STUB for GET /:id/edit')
+  // let id = Number(req.params.id)
+  // if(isNaN(id)){
+  //   res.render('404')
+  // }
+  // else if (!places[id]){
+  //   res.render('places/edit')
+  // }
+  // else{
+  //   res.render('places/edit', {place: places[id]})
+  // }
 })
-
+router.post('/:id/rant', (req, res)=>{
+  res.send('STUB for GET /places/:id/rant')
+})
+router.delete('/:id/rant/:rantId', (req, res)=>{
+  res.send('STUB for GET /places/:id/rant/:rantId')
+})
 
 // router.get('places/:id',(req,res)=>{
 //   res.send('Placeholder for details')
