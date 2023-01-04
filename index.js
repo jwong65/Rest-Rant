@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const express = require('method-override')
+//const express = require('method-override')
 require(`dotenv`).config()
 
 //JSX 
@@ -13,7 +13,7 @@ app.use(express.static('public'))
 
 app.use(express.urlencoded({ extended: true }))
 
-app.use(methodOverride('_method'))
+//app.use(methodOverride('_method'))
 
 app.use('/places', require('./controllers/places'))
 
