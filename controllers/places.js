@@ -13,7 +13,7 @@ router.post('/', (req, res)=>{
       let message = 'Validation Error: '
       for (var field in err.errors){
         message+= `${field} was ${err.errors[field].value}.`
-        message+= `${err.errors[field].message}`
+        message+= ` ${err.errors[field].message}`
       }
       res.render('places/newpage', {message})
 
