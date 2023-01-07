@@ -2,10 +2,19 @@ const React = require('react')
 //Default
 const Def = require('../default')
 
-function newPage(){
+function newPage(data){
+    let message = ''
+    if (data.message){
+        message = (
+            <h4 className='alert-danger'>
+                {data.message}
+            </h4>
+        )
+    }
     return(
         <Def>
             <main>
+                {message}
                 <h1>Add a new place</h1>
                 {/*Action sends to places back to index */}
                 <form method="POST" action="/places">
