@@ -5,12 +5,16 @@ const placesSchema = new mongoose.Schema({
   city: {type:String, default:"AnyCity"},
   state: {type:String, default:"AnyState"},
   cuisines: {type:String, required:true},
-  pic: String,
+  pic: {type: String, default:'http://placekitten.com/255/255'},
   attribute: String,
   author: String,
   unsplash: String,
   site: String,
-  founded: Number
+  founded: {
+    type: Number,
+    min: [1500 , 'This is way too old'],
+    max: [new Date().getFullYear(), 'This is in the future and not possible.']
+  }
 })
 
 placesSchema.methods.showEstablished = function(){
