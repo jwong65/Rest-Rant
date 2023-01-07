@@ -12,6 +12,10 @@ const placesSchema = new mongoose.Schema({
   site: String,
   founded: Number
 })
+
+placesSchema.methods.showEstablished = function(){
+  return `${this.name} has been serving ${this.city},${this.state} since it was founded in ${this.founded}`
+}
 module.exports= mongoose.model('Place', placesSchema)
 // module.exports = [{
 //     name: 'H-Thai-ML',
