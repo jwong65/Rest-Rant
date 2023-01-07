@@ -1,7 +1,7 @@
 const express = require('express')
 require(`dotenv`).config()
+
 const app = express()
-const express = require('express')
 const methodOverride = require('method-override')
 
 //JSX 
