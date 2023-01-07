@@ -1,4 +1,5 @@
 const React = require('react')
+const places = require('.')
 const Def = require('../default')
 
 // data argument includes place information
@@ -26,8 +27,8 @@ function show(data){
             <div>
                 <h3>Comments</h3>
             </div>
-            <a href={`/places/${place.id}/edit`} className='bth btn-warning'>Edit</a>
-            <form method='POST' action={`/places/${place.id}?_method=DELETE`}>
+            <a href={`/places/${places.id}/edit`} className='bth btn-warning'>Edit</a>
+            <form method='POST' action={`/places/${places.id}?_method=DELETE`}>
                 <button type='submit' className='btn btn-danger'>Delete</button>
             </form>
         </Def>
