@@ -1,5 +1,7 @@
 //connect to the mongoose
 const mongoose = require('mongoose')
+//connect to dotenv
+require('dotenv').config()
 mongoose.connect(process.env.MONGO_URI,{
     //These are optional, but will remove messages in terminal?
     useNewUrlParser:true,
