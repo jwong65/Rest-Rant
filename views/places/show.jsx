@@ -12,7 +12,7 @@ function show(data){
                     {data.place.name}
                 </h1>
                 <h3>
-                Located in {data.place.city}, {data.place.state}
+                Located in {data.place.city}, {data.place.state} serving {data.place.cuisine}
                 </h3>
             </div>
                 <h2>
@@ -20,7 +20,7 @@ function show(data){
                 </h2>
                 <h3>Description</h3>
                 <h4>
-                    
+                    {data.place.showEstablished()}
                 </h4>
             </main>
             <div>
