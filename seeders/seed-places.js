@@ -26,3 +26,9 @@ db.Place.create([{
   
   }]
 )
+.then(()=>{
+
+})
+.catch(err=>{
+    
+})
