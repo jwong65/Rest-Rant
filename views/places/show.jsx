@@ -6,17 +6,22 @@ function show(data){
     return(
         <Def>
             <main>
+            <div>
             <img src= {data.place.pic} alt={data.place.name}/>
                 <h1>
                     {data.place.name}
                 </h1>
+                <h3>
+                Located in {data.place.city}, {data.place.state}
+                </h3>
+            </div>
                 <h2>
                     Reviews
                 </h2>
                 <h3>Description</h3>
-                <p>
-                    Located in {data.place.city}
-                </p>
+                <h4>
+                    
+                </h4>
             </main>
             <div>
                 <h3>Comments</h3>

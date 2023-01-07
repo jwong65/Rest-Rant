@@ -25,7 +25,7 @@ main{
     width:50%
 }
 /* Place CSS images */
-.Seattle, .Phoenix{
+.Seattle, .Phoenix, img{
     height: 400px;
     width: 300px;
 }
