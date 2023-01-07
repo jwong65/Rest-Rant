@@ -32,7 +32,7 @@ function newPage(){
                     </div>
                     <div className='form-group'>
                         <label htmlFor='founded'>Founded</label>
-                        <input className='form-control text-center' id='founded' name='founded'></input>
+                        <input type='number' className='form-control text-center' id='founded' name='founded' value={new Date().getFullYear()}></input>
                     </div>
                     <input type='submit' className="btn btn-primary" value='Add Place'></input>
                 </form>
