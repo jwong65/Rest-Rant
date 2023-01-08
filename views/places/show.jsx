@@ -42,6 +42,19 @@ function show(data){
                 {comments}
                 
             </div>
+            <form method='POST' action={`/places/${data.id}/comment`}>
+                <div>
+                    <label htmlFor='author'>Name:</label>
+                    <input className='form-control text-center' type='text' id='author' name='author'></input>
+                    
+                    <label htmlFor='content'>Comments</label>
+                    <input className='form-control text-center' type='textarea' id='content' name='content'></input>
+
+                    <label htmlFor='rating'>Rating</label>
+                    <input step={.5} type='number' id='rating' name='rating' min={0} max={5}></input>
+ 
+                </div>
+            </form>
             <a href={`/places/${data.id}/edit`} className='bth btn-warning'>Edit</a>
             <form method='POST' action={`/places/${data.id}?_method=DELETE`}>
                 <button type='submit' className='btn btn-danger'>Delete</button>
