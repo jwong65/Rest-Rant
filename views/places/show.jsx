@@ -4,6 +4,7 @@ const Def = require('../default')
 
 // data argument includes place information
 function show(data){
+    let comments = (<h3 className='inactive'>There are no comments about this place.</h3>)
     return(
         <Def>
             <main>
@@ -26,7 +27,8 @@ function show(data){
             </main>
             <div>
                 <h3>Comments</h3>
-                <h3 className='inactive'>There are no comments about this place.</h3>
+                {comments}
+                
             </div>
             <a href={`/places/${data.id}/edit`} className='bth btn-warning'>Edit</a>
             <form method='POST' action={`/places/${data.id}?_method=DELETE`}>
