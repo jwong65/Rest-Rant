@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 
 let commentSchema = new mongoose.Schema({
     author: {type: String, default: 'Nobody'},
-    rant: {type: Boolean, default: false},
+    content: {type: String, default: 'Nothing'},
     star: {type: Number, required: true},
-    content: {type: String, default: 'Nothing'}
-
+    rant: {type: Boolean, default: false}
+    
 })
 
 module.exports = mongoose.model('Comment', commentSchema)
