@@ -4,10 +4,14 @@ require(`dotenv`).config()
 const app = express()
 const methodOverride = require('method-override')
 
+const mongoose = require('mongoose')
+mongoose.set('strictQuery', true)
+
 //JSX 
 //app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+
 
 //To refer to the public
 app.use(express.static('public'))
