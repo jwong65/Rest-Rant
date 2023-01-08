@@ -5,6 +5,18 @@ const Def = require('../default')
 // data argument includes place information
 function show(data){
     let comments = (<h3 className='inactive'>There are no comments about this place.</h3>)
+    if (data.place.comments.length){
+        comments = data.place.comments.map( c=>{
+            return(
+                <div className='border'>
+                    <h2 className='rant'>{c.rant ? 'Rant!' : 'Rave'}</h2>
+                    <h4>{c.content}</h4>
+                    <h3>By - {c.author}</h3>
+                    <h4>Rating : {c.star}</h4>
+                </div>
+            )
+        })
+    }
     return(
         <Def>
             <main>
