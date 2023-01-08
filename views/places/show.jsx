@@ -52,6 +52,11 @@ function show(data){
 
                     <label htmlFor='rating'>Rating</label>
                     <input step={.5} type='number' id='rating' name='rating' min={0} max={5}></input>
+
+                    <label htmlFor='rant'>Would you like to rant?</label>
+                    <input type="checkbox" name='rant' id='rant'></input>
+
+                    <input type='submit' className="btn btn-primary" value='Submit Comments'></input>
  
                 </div>
             </form>
