@@ -14,7 +14,8 @@ const placesSchema = new mongoose.Schema({
     type: Number,
     min: [1500 , 'This is way too old'],
     max: [new Date().getFullYear(), 'This is in the future and not possible.']
-  }
+  },
+  comments:[{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}]
 })
 
 placesSchema.methods.showEstablished = function(){

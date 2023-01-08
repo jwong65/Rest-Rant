@@ -10,3 +10,5 @@ mongoose.connect(process.env.MONGO_URI,{
 
 //Needs to connect to the places.js
 module.exports.Place =require('./places')
+//Needs to connect to comment.js
+module.exports.Comment = require('./comment')
