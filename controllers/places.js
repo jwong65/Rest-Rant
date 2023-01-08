@@ -145,8 +145,10 @@ router.post('/:id/comment', (req, res)=>{
       .then(()=>{
         res.redirect(`/places/${req.params.id}`)
       })
+      .catch(err=>{
+        res.render('404')
+      })
     })
-
   })
   .catch(err=>{
     res.render('404')

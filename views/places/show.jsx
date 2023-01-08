@@ -42,7 +42,7 @@ function show(data){
                 {comments}
                 
             </div>
-            <form method='POST' action={`/places/${data.id}/comment`}>
+            <form method='POST' action={`/places/${data.place.id}/comment`}>
                 <div>
                     <label htmlFor='author'>Name:</label>
                     <input className='form-control text-center' type='text' id='author' name='author'></input>
@@ -50,8 +50,8 @@ function show(data){
                     <label htmlFor='content'>Comments</label>
                     <input className='form-control text-center' type='textarea' id='content' name='content'></input>
 
-                    <label htmlFor='rating'>Rating</label>
-                    <input step={.5} type='number' id='rating' name='rating' min={0} max={5}></input>
+                    <label htmlFor='star'>Rating</label>
+                    <input step={.5} type='number' id='star' name='star' min={0} max={5}></input>
 
                     <label htmlFor='rant'>Would you like to rant?</label>
                     <input type="checkbox" name='rant' id='rant'></input>
