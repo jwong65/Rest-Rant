@@ -132,8 +132,25 @@ router.get('/:id/edit', (req, res) => {
   //   res.render('places/edit', {place: places[id]})
   // }
 })
-router.post('/:id/rant', (req, res)=>{
-  res.send('STUB for GET /places/:id/rant')
+router.post('/:id/comment', (req, res)=>{
+  console.log(req.body)
+  req.body.rant = req.body.rant ? true : false
+
+  db.Place.findById(req.params.id)
+  .then(place=>{
+    db.Comment.create(req.body)
+    .then(comment=>{
+      place.comments.push(comment.id)
+      place.save()
+      .then(()=>{
+        res.redirect(`/places/${req.params.id}`)
+      })
+    })
+
+  })
+  .catch(err=>{
+    res.render('404')
+  })
 })
 router.delete('/:id/rant/:rantId', (req, res)=>{
   res.send('STUB for GET /places/:id/rant/:rantId')
