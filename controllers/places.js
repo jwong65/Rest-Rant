@@ -120,7 +120,13 @@ router.put('/:id', (req, res) => {
 
 // This is the edit.jsx
 router.get('/:id/edit', (req, res) => {
-  res.send('STUB for GET /:id/edit')
+  db.Place.findById(req.params.id)
+    .then(place =>{
+      res.render('places/edit', {place})
+    })
+    .catch(err=>{
+      res.render('404')
+    })
   // let id = Number(req.params.id)
   // if(isNaN(id)){
   //   res.render('404')
@@ -156,7 +162,7 @@ router.post('/:id/comment', (req, res)=>{
 })
 router.delete('/:id/rant/:rantId', (req, res)=>{
   db.Place.findByIdAndDelete(req.params.id)
-  .then(place=>{
+  .then(()=>{
     res.redirect('/places')
   })
   .catch(err=>{
