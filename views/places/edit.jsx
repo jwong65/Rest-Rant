@@ -33,7 +33,7 @@ function edit(data){
                         <label htmlFor='founded'>Founded:</label>
                         <input className='form-control text-center' id='founded' name='founded' value={data.place.founded}></input>
                     </div>
-                    <input type='submit' className="btn btn-primary" value='Add Place'></input>
+                    <input type='submit' className="btn btn-primary" value='Edit Place'></input>
                 </form>
 
             </main>

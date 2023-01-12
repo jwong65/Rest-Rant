@@ -93,7 +93,14 @@ router.get('/:id', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-  res.send('STUB for PUT /:id')
+  
+  db.Place.findByIdAndUpdate(req.params.id, req.body)
+    .then(()=>{
+      res.redirect(`/places/${req.params.id}`)
+    })
+    .catch(err=>{
+      res.render('404')
+    })
   // let id = Number(req.params.id)
   // if (isNaN(id)) {
   //     res.render('404')
@@ -160,7 +167,7 @@ router.post('/:id/comment', (req, res)=>{
     res.render('404')
   })
 })
-router.delete('/:id/rant/:rantId', (req, res)=>{
+router.delete('/:id/', (req, res)=>{
   db.Place.findByIdAndDelete(req.params.id)
   .then(()=>{
     res.redirect('/places')
