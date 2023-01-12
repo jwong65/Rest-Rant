@@ -8,16 +8,25 @@ function show(data){
     
     //Need to put rating into a variable like comments
     let rating =(
-        <h3 className='inactive'>There is no rating.</h3>
+        <h3 className='inactive'>There is no rating</h3>
     )
     if (data.place.comments.length){
+        let sumRatings =data.place.comments.reduce((tot, c)=>{
+            return tot + c.star
+        }, 0)
+        let averageRating = sumRatings /data.place.comments.length
+        rating =(
+            <h3>
+                {averageRating} stars
+            </h3>
+        )
         comments = data.place.comments.map( c=>{
             return(
                 <div className='border'>
                     <h2 className='rant'>{c.rant ? 'Rant!' : 'Rave'}</h2>
                     <h4>{c.content}</h4>
                     <h3>By - {c.author}</h3>
-                    <h4>Rating : {rating}</h4>
+                    <h4>Rating : {c.star}</h4>
                 </div>
             )
         })
@@ -37,6 +46,7 @@ function show(data){
                 <h2>
                     Reviews
                 </h2>
+                {rating}
                 <h3>Description</h3>
                 <h4>
                     {data.place.showEstablished()}
