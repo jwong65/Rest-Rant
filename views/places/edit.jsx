@@ -29,6 +29,10 @@ function edit(data){
                         <label htmlFor='cuisines'>Cuisine:</label>
                         <input className='form-control text-center' id='cuisines' name='cuisines' value = {data.place.cuisines} required></input>
                     </div>
+                    <div className='form-group col-sm-6'>
+                        <label htmlFor='founded'>Founded:</label>
+                        <input className='form-control text-center' id='founded' name='founded' value={data.place.founded}></input>
+                    </div>
                     <input type='submit' className="btn btn-primary" value='Add Place'></input>
                 </form>
 
